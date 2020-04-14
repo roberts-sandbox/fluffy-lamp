@@ -1,0 +1,15 @@
+name: test push paths
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: test-push-paths
+    runs-on: ubuntu-16.04
+    steps:
+    - name: dump the payload
+      run: |
+        cat $GITHUB_EVENT_PATH
